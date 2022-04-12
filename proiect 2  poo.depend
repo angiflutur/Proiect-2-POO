@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1649797321 source:c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\civil.cpp
+	"civil.hpp"
+	"proces.hpp"
+
+1649797213 c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\civil.hpp
+	<iostream>
+	"proces.hpp"
+
+1649797213 c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\proces.hpp
+	<iostream>
+
+1649797340 source:c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\main.cpp
+	<iostream>
+	<vector>
+	"proces.hpp"
+	"civil.hpp"
+	"penal.hpp"
+
+1649797213 c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\penal.hpp
+	<iostream>
+	"proces.hpp"
+
+1649797321 source:c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\penal.cpp
+	"penal.hpp"
+
+1649797213 source:c:\users\flutu\desktop\tema 2 poo\proiect 2  poo\proces.cpp
+	"proces.hpp"
+
