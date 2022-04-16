@@ -78,12 +78,7 @@ void ProcesPenal::citire()
 {
     cout<<endl;
     cout<<" Proces penal \n";
-    cout<<" nr proces: ";
-    cin>>nrProces;
-    cout<<" reclamant: ";
-    cin>>reclamant;
-    cout<<" reclamat: ";
-    cin>>reclamat;
+//    cin>>(Proces&)obj;
     cout<<" dovezi: ";
     cin>>dovezi;
     if(dovezi>25)
@@ -96,9 +91,8 @@ void ProcesPenal::citire()
 void ProcesPenal::afisare()
 {
     cout<<" Proces penal \n";
-    cout<< " nr proces: "<<nrProces<<endl;
-    cout<<" reclamant: "<<reclamant<<endl;
-    cout<<" reclamat: "<<reclamat<<endl;
+
+ //   cout<<(Proces&)obj;
     cout<<" dovezi: "<<dovezi<<endl;
     cout<<" stadiu: "<<stadiu<<endl;
 }
