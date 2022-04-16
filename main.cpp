@@ -27,6 +27,7 @@ void meniu()
         cout<<" 2. Testare getteri, setteri"<<endl;
         cout<<" 3. Testare operatori >>, <<, ="<<endl;
         cout<<" 4. Afisare proces civil cu timbrul cel mai mare"<<endl;
+        cout<<" 5. Testare functii virtuale"<<endl;
         cin>>comanda;
         int tip = 0;
         if(comanda == 0)
@@ -60,7 +61,7 @@ void meniu()
                     *procesCivil = ProcesC[i];
                     //procese.push_back(procesCivil); //upcasting
                 }
-                cout<<" Afisare procese\n";
+                cout<<"\n Afisare procese\n";
                 for(int i = 0; i< nrProceseCivile; i++)
                     cout<<ProcesC[i]<<" ";
                 cout<<endl;
@@ -79,7 +80,7 @@ void meniu()
                     *procesPenal = ProcesP[i];
                     procese.push_back(procesPenal); //upcasting
                 }
-                cout<<" Afisare procese\n";
+                cout<<"\n Afisare procese\n";
                 for(int i = 0; i< nrProcesePenale; i++)
                     cout<<ProcesP[i]<<" ";
                 cout<<endl;
@@ -249,11 +250,42 @@ void meniu()
                     maxi = ProcesC[i].TaxaTimbru();
                 //procese.push_back(procesCivil); //upcasting
             }
-            cout<<" Afisare procese\n";
+            cout<<"\n Timbrul cel mai mare = "<< maxi;
+            cout<<"\n Procesul cu timbrul cel mai mare\n";
             for(int i = 0; i< nrProceseCivile; i++)
                 if(ProcesC[i].TaxaTimbru() == maxi)
                     cout<<ProcesC[i];
             cout<<endl;
+        }
+        else if(comanda == 5)
+        {
+            cout<<"   Tip proces: "<<endl;
+            cout<<" 1. Proces civil"<<endl;
+            cout<<" 2. Proces penal"<<endl;
+
+            tip = 0;
+            cin>>tip;
+            while(tip < 1 || tip>2)
+            {
+                cout<<" Comanda: ";
+                cin>>tip;
+                if(tip!=1 || tip!=2)
+                    cout<<" Tip proces invalid. Mai incercati."<<endl;
+            }
+            if(tip == 1)
+            {
+                ProcesCivil p;
+                p.citire();
+                cout<<endl;
+                p.afisare();
+            }
+            else if(tip == 2)
+            {
+                ProcesPenal p;
+                p.citire();
+                cout<<endl;
+                p.afisare();
+            }
         }
         else cout<<" Comanda invalida"<<endl;
     }
@@ -277,7 +309,6 @@ int main()
         cin>>comanda;
     }
     meniu();
-
     /**
     // downcasting
     cout<<endl;
