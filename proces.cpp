@@ -51,7 +51,7 @@ void Proces::SetReclamat(string reclamat)
 }
 string Proces::GetTara()
 {
-    return this->tara;
+    return tara;
 }
 string Proces::tara = "Romania";
 void Proces::SetTara(string TARA)
@@ -73,6 +73,7 @@ ostream& operator<<(ostream& out,const Proces& obj)
     out<<obj.nrProces<<std::endl;
     out<<" reclamant: "<<obj.reclamant<<std::endl;
     out<<" reclamat: "<<obj.reclamat<<std::endl;
+    out<<" tara: "<<obj.tara<<std::endl;
     return out;
 }
 istream& operator>>(istream& in,Proces& obj)
@@ -83,6 +84,8 @@ istream& operator>>(istream& in,Proces& obj)
     in>>obj.reclamant;
     cout<<" reclamat: ";
     in>>obj.reclamat;
+    cout<<" tara: ";
+    in>>obj.tara;
     return in;
 }
 // functii virtuale
@@ -96,6 +99,8 @@ void Proces::citire()
     cin>>reclamant;
     cout<<" reclamat: ";
     cin>>reclamat;
+    cout<<" tara: ";
+    cin>>tara;
 }
 void Proces::afisare()
 {
@@ -104,5 +109,6 @@ void Proces::afisare()
     cout<< " nr proces: "<<nrProces<<endl;
     cout<<" reclamant: "<<reclamant<<endl;
     cout<<" reclamat: "<<reclamat<<endl;
+    cout<<" tara: "<<tara<<endl;
 }
 
