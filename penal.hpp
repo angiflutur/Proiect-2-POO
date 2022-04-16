@@ -22,8 +22,6 @@ public:
     void SetDovezi(int);
     void SetStadiu(bool);
 
-    /**int GetTara();*/
-    /**static void SetTara(string);*/
 
     //Operatori
     ProcesPenal& operator=(const ProcesPenal&);
