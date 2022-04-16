@@ -89,10 +89,11 @@ ostream& operator<<(ostream& out,const ProcesCivil& obj)
     out<<" daune morale: "<<obj.dauneMorale<<std::endl;
     out<<" daune materiale: "<<obj.dauneMateriale<<std::endl;
     out<<" nr martori: "<<obj.nrMartori<<std::endl;
+
     if(obj.nrMartori > 5)
-        out<<" stadiu: "<<1<<std::endl;
+    out<<" stadiu: "<<1<<std::endl;
     else
-        out<<" stadiu: "<<0<<std::endl;
+    out<<" stadiu: "<<0<<std::endl;
     return out;
 }
 istream& operator>>(istream& in,ProcesCivil& obj)
@@ -105,6 +106,7 @@ istream& operator>>(istream& in,ProcesCivil& obj)
     in>>obj.dauneMateriale;
     cout<<" nr martori: ";
     in>>obj.nrMartori;
+
     return in;
 }
 // functii virtuale
@@ -112,12 +114,13 @@ void ProcesCivil::citire()
 {
     cout<<endl;
     cout<<" Proces civil \n";
-    cout<<" nr proces: ";
+    /**cout<<" nr proces: ";
     cin>>nrProces;
     cout<<" reclamant: ";
     cin>>reclamant;
     cout<<" reclamat: ";
-    cin>>reclamat;
+    cin>>reclamat;*/
+    cin>>(Proces&)obj;
     cout<<" daune morale: ";
     cin>>dauneMorale;
     cout<<" daune materiale: ";
@@ -134,9 +137,8 @@ void ProcesCivil::citire()
 void ProcesCivil::afisare()
 {
     cout<<" Proces civil\n";
-    cout<< " nr proces: "<<nrProces<<endl;
-    cout<<" reclamant: "<<reclamant<<endl;
-    cout<<" reclamat: "<<reclamat<<endl;
+
+    cout<<(Proces&)obj;
     cout<<" daune morale: "<<dauneMorale<<endl;
     cout<<" daune materiale: "<<dauneMateriale<<endl;
     cout<<" nr martori: "<<nrMartori<<endl;
@@ -147,4 +149,3 @@ float ProcesCivil::TaxaTimbru()
 {
     return (10*this->dauneMorale/100 + 10*this->dauneMateriale/100);
 }
-
