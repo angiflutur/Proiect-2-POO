@@ -28,8 +28,6 @@ public:
     void SetNrMartori(int);
     void SetStadiu(bool);
 
-    /**int GetTara();*/
-    /**static void SetTara(string);*/
 
     //Operatori
     ProcesCivil& operator=(const ProcesCivil&);
