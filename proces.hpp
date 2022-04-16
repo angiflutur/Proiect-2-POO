@@ -25,8 +25,8 @@ public:
     void SetReclamant(string);
     void SetReclamat(string );
 
-    string GetTara();
-    void SetTara(string); //functii statice
+    static string GetTara();
+    static void SetTara(string); //functii statice
 
     //Operatori
     Proces& operator=(const Proces&);
